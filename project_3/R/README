@@ -1,3 +1,0 @@
-I could not create a BAMM function due to the nature of our phylogenies. 
-BAMM requires trees to be ultrametric and have a minimum edge length of 0.
-Our trees don't have these attributes so I made new functions. 
