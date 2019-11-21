@@ -1,0 +1,19 @@
+---
+title: "PackageInstructions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("dplyr")
+library(dplyr)
+```
+
+## Running the Function
+# A .log file from an MCMC is read in with the desired number of rows to sample from that .log file and exported to a .tsv file 
+
+```{r}
+log_sampler("data/TH_rates", 25, "output/small_log.tsv")
+```
+
+

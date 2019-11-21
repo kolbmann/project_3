@@ -1,0 +1,28 @@
+---
+title: "PackageInstructions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("ggtree")
+install.packages("tidytree")
+install.packages("treeio")
+install.packages("dplyr")
+install.packages("phytools")
+library(ggtree)
+library(tidytree)
+library(treeio)
+library(dplyr)
+library(phytools)
+```
+
+## R Markdown
+# .tre file read to create an interactive plot that can collapse nodes based on desired visual field. 
+# Index number of node is required to create a more accessible node to click
+
+```{r}
+collapser("data/ants.mcc.trees", 1370)
+```
+
+

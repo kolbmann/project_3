@@ -1,0 +1,21 @@
+Package: treeparter
+Type: Package
+Title: Modifying, visualizing, and choosing clades for analysis
+Version: 1.0.0
+Authors@R: person("Christina", "Kolbmann", role=c("aut", "cre"), email="christina.kolbmann@selu.edu")
+Description: An R package to create lineage through time plots, randomly sample trees from log files, and collapse clades for better visulizations.
+License: MIT
+Imports:
+  ape,
+  treeio,
+  phytools,
+  ggtree,
+  tidytree,
+  tidyverse
+Suggests:
+  knitr,
+  rmarkdown
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: knitr
+RoxygenNote: 7.0.0

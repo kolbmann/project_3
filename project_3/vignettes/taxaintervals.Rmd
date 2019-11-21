@@ -1,0 +1,21 @@
+---
+title: "PackageInstructions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("ape")
+install.packages("treeio")
+install.packages("phytools")
+library(ape)
+library(treeio)
+library(phytools)
+```
+
+## R Markdown
+# .tre file read to create a Lineage through Time plot with gamma distribution
+
+```{r}
+taxaintervals("data/ants.mcc.trees", "output/LTT_plot")
+```
