@@ -5,7 +5,9 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setRepositories(ind=1:5)
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("treeio")
 install.packages("ape")
 install.packages("treeio")
 install.packages("phytools")
@@ -14,9 +16,10 @@ library(treeio)
 library(phytools)
 ```
 
-## R Markdown
 # .tre file read to create a Lineage through Time plot with gamma distribution
 
 ```{r}
 taxaintervals("data/ants.mcc.trees", "output/LTT_plot")
 ```
+
+# package is available on Github via this link: https://github.com/kolbmann/project_3/tree/master/project_3

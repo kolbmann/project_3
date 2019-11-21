@@ -5,10 +5,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setRepositories(ind=1:5)
-install.packages("ggtree")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("treeio")
+BiocManager::install("ggtree")
 install.packages("tidytree")
-install.packages("treeio")
 install.packages("dplyr")
 install.packages("phytools")
 library(ggtree)
@@ -18,7 +19,6 @@ library(dplyr)
 library(phytools)
 ```
 
-## R Markdown
 # .tre file read to create an interactive plot that can collapse nodes based on desired visual field. 
 # Index number of node is required to create a more accessible node to click
 
@@ -26,4 +26,5 @@ library(phytools)
 collapser("data/ants.mcc.trees", 1370)
 ```
 
+# package is available on Github via this link: https://github.com/kolbmann/project_3/tree/master/project_3
 
